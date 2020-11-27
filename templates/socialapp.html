@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>socialapp</h1>
+
+
+{% for user in user %}
+
+{{user.name}}<br><br>
+<img  src="{{ user.file.url }}" alt="My image" height="200" width="200"><br><br>
+<button><a href="{% url 'delete' id=user.id %}">delete</a></button><br><br>
+<button><a href="{% url 'update' id=user.id %}">update</a></button><br><br>
+<button><a href="{% url 'insertgallery' id=user.id %}">insertgallery</a></button><br><br>
+
+<hr>
+
+
+{% endfor %}
+
+</body>
+</html>

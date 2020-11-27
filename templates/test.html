@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>test</h1>
+
+<button><a href="{% url 'download_csv' %}">download csv</a></button>
+
+
+<form method="get">
+    {% csrf_token %}
+    <label>name :</label>
+    <input type="text" name="name"><br><br>
+
+        <label>dob :</label>
+    <input type="date" name="dob"><br><br>
+
+    <input type="submit">
+
+</form>
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>name</th>
+    <th>dob</th>
+  </tr>
+    {% for emp in emp %}
+  <tr>
+    <td>{{emp.name1}}</td>
+    <td>{{emp.dob}}</td>
+  </tr>
+    {% endfor %}
+
+</table>
+
+
+
+</body>
+</html>

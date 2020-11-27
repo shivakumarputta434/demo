@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>upload gallery</h1>
+<h1>{{user.name}}</h1>
+
+
+{% for user1 in user.info.all %}
+
+<img  src="{{ user1.gimage.url }}" alt="My image" height="200" width="200"><br><br>
+<button><a href="{% url 'deleteimage' id=user1.id %}">delete</a></button><br><br>
+<button><a href="{% url 'updateimage' id=user1.id %}">update</a></button><br><br>
+<button><a href="{% url 'testurls' id=10 %}">testurls</a></button><br><br>
+<hr>
+
+
+{% endfor %}
+
+
+
+
+  <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="gimage">
+        <button type="submit">Upload</button>
+
+    </form>
+
+
+
+</body>
+</html>
