@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Register1</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <div class="container">
+
+
+    <hr>
+
+    <label for="yname"><b>Name</b></label><br><br>
+    <input type="text" placeholder="Enter name" name="yname" id="yname" required><br><br>
+
+    <label for="fname"><b>Father Name</b></label><br><br>
+    <input type="text" placeholder="Father Name" name="fname" id="fname" required><br><br>
+
+    <label for="area"><b>Area</b></label><br><br>
+    <input type="text" placeholder="Enter area" name="area" id="area" required><br><br>
+
+
+
+      <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+
+
+      <label for="location">Choose location:</label><br><br>
+  <select name="location" id="location">
+    <option value="ecil">Ecil</option>
+    <option value="uppal">Uppal</option>
+    <option value="secbad">Sec-Bad</option>
+    <option value="Hyd">Hyd</option>
+  </select>
+  <br><br>
+
+
+    <hr>
+
+    <button type="submit" class="registerbtn" name="nfoform2">Next</button>
+  </div>
+
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Register3</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <div class="container">
+
+
+    <hr>
+<label>Are you be with the government ?</label><br>
+      <input type="radio"  name="bewith" value="yes">
+  <label>yes</label><br>
+
+      <input type="radio"  name="bewith" value="no">
+  <label>no</label><br>
+
+
+
+
+
+  <br><br>
+
+
+
+    <hr>
+
+    <button type="submit" class="registerbtn">Submit</button>
+  </div>
+
+
+</form>
+
+
+
+</body>
+</html>

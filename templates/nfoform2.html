@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Register2</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <div class="container">
+
+
+    <hr>
+<label>1. what is your age ?</label><br>
+      <input type="radio"  name="age" value="18-24">
+  <label for="age1">18-24</label><br>
+
+      <input type="radio"  name="age" value="25-35">
+  <label for="age2">25-35</label><br>
+
+            <input type="radio"  name="age" value="36-60">
+  <label for="age3">36-60</label><br>
+
+            <input type="radio"  name="age" value="61-100">
+  <label for="age4">61-100</label><br>
+
+
+
+  <br><br>
+
+
+      <label>2. rate the present government ?</label><br>
+      <input type="radio" id="age1" name="rate" value="not satisfied">
+  <label for="age1">not satisfied</label><br>
+
+      <input type="radio" id="age2" name="rate" value="partially satisfied">
+  <label for="age2">partially satisfied</label><br>
+
+            <input type="radio" id="age3" name="rate" value="satisfied">
+  <label for="age3">satisfied</label><br>
+
+            <input type="radio" id="age4" name="rate" value="fully satisfied">
+  <label for="age4">fully satisfied</label><br>
+
+
+
+    <hr>
+
+    <button type="submit" class="registerbtn" name="nfoform3">Next</button>
+  </div>
+
+
+</form>
+
+
+
+</body>
+</html>
